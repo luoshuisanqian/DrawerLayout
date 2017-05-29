@@ -1,0 +1,17 @@
+<menu xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:tools="http://schemas.android.com/tools"
+    tools:context="com.day0404.MainActivity" >
+
+    <!--
+    android:showAsAction="ifRoom|withText"显示方式，如果有空间的话显示图标和文字
+    一般当手机为横屏的时显示图片和文字
+    当手机为坚屏的时候显示图标
+    -->
+
+    <item
+        android:id="@+id/action_websearcher"
+        android:icon="@drawable/action_search"
+        android:showAsAction="always"
+        android:title="webscearch"/>
+
+</menu>

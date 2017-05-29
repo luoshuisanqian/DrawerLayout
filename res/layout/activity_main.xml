@@ -1,0 +1,41 @@
+<android.support.v4.widget.DrawerLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/drawerLayout"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent" >
+    <!-- 注意事项
+    1.主内容视图一定要是DrawerLayout的第一个子视图
+    2.主内容视图宽度和高度匹配父视图，即”matcher_parent“
+    3.必须显示指定抽屉（如Listview）的android:layout_gravity属性
+   		1） android:layout_gravity="start" 时，从左向右滑
+    	2） android:layout_gravity="end" 时，从右向左滑
+    	3）不推荐使用left 和 right
+    4.抽屉视图的宽度以dp为单位，请不要超过320dp(为了总能看到一些主内容视图)
+     -->
+
+    <!-- 第一个视图为主要内容的视图  the main content view -->
+
+	<!-- 在后续的代码当中，动态地在FrameLayout插入Fragment -->
+    <FrameLayout
+        android:id="@+id/content_frame"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent" >
+    </FrameLayout>
+
+    <!-- 第二个视图为左侧的导航视图    the navigation view -->
+    <!-- 当android:layout_gravity="start" 表示从左往右滑
+    如果为end表示从右往左滑 -->
+    <!-- android:choiceMode="singleChoice"单选模式 -->
+    <!-- android:divider="@android:color/transparent"不需要项与项之间的分割条 -->
+    <ListView 
+        android:id="@+id/left_drawer"
+        android:layout_width="240dp"
+        android:layout_height="match_parent"
+		android:layout_gravity="start"   
+		android:background="#ffffcc"     
+		android:choiceMode="singleChoice"
+		android:divider="@android:color/holo_blue_bright"
+		android:dividerHeight="2dp"
+        >
+        
+    </ListView>
+</android.support.v4.widget.DrawerLayout>
